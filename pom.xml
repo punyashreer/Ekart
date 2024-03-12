@@ -28,18 +28,6 @@
     <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
     <sonar.language>java</sonar.language>
     </properties>
-<distributionManagement>
-  <repository>
-    <id>maven-releases</id>
-    <!-- CHANGE HERE by your team Nexus server -->
-    <url>http://13.127.4.241:8081/repository/maven-releases//</url>
-  </repository>
-  <snapshotRepository>
-    <id>maven-snapshots</id>
-    <!-- CHANGE HERE by your team Nexus server -->
-    <url>http://13.127.4.241:8081/repository/maven-releases//</url>
-  </snapshotRepository>
-</distributionManagement>
     <dependencies>
         <!-- Data JPA -->
         <dependency>
@@ -158,5 +146,18 @@
 </plugin>
         </plugins>
     </build>
+
+                  <distributionManagement>
+    <repository>
+      <id>maven-releases</id>
+      <name>maven-releases</name>
+      <url>http://13.127.4.241:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>maven-snapshots</id>
+      <name>maven-snapshots</name>
+      <url>http://13.127.4.241:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
 
 </project>
